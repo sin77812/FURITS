@@ -40,7 +40,7 @@ export const products: Product[] = [
     price: 48000,
     unit: '6개입 박스',
     description: '열대 과일의 여왕, 프리미엄 완숙 애플망고',
-    image: '/applemango.png',
+    image: '/APPLEMANGO.png',
     origin: '필리핀',
     season: '4월 - 8월'
   },
