@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-off-white text-deep-green;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  }
+}
+
+@layer components {
+  .container-fluid {
+    @apply w-full px-4 md:px-8 lg:px-16 xl:px-24;
+  }
+  
+  .heading-primary {
+    font-family: 'Playfair Display', 'Noto Serif KR', serif;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+  
+  .heading-secondary {
+    font-family: 'Playfair Display', 'Noto Serif KR', serif;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+  
+  .text-premium {
+    font-family: 'Noto Serif KR', serif;
+    @apply tracking-wide;
+  }
+  
+  .btn-premium {
+    @apply px-8 py-4 bg-deep-green text-premium-gold border-2 border-deep-green 
+           transition-all duration-500 hover:bg-transparent hover:text-deep-green
+           hover:shadow-lg relative overflow-hidden;
+  }
+  
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-premium-gold to-transparent
+           -translate-x-full transition-transform duration-700;
+    opacity: 0.3;
+  }
+  
+  .btn-premium:hover::before {
+    @apply translate-x-full;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-soft-beige;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-deep-green rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-premium-gold;
+}
