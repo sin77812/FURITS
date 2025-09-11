@@ -94,7 +94,7 @@ export default function ProductsSection() {
           {products.map((product, index) => (
             <div
               key={product.id}
-              ref={el => productsRef.current[index] = el}
+              ref={el => { productsRef.current[index] = el }}
               className="group relative bg-white rounded-lg overflow-hidden shadow-xl
                          hover:shadow-2xl transition-all duration-500"
             >

@@ -59,11 +59,15 @@ export default function CTASection() {
 
       // CTA 버튼 흔들림 효과
       const shakeButtons = () => {
-        gsap.to(buttonsRef.current?.children[0], {
-          x: [-2, 2, -2, 2, 0],
-          duration: 0.5,
-          ease: 'power2.inOut'
-        })
+        if (buttonsRef.current?.children[0]) {
+          const timeline = gsap.timeline()
+          timeline
+            .to(buttonsRef.current.children[0], { x: -2, duration: 0.1 })
+            .to(buttonsRef.current.children[0], { x: 2, duration: 0.1 })
+            .to(buttonsRef.current.children[0], { x: -2, duration: 0.1 })
+            .to(buttonsRef.current.children[0], { x: 2, duration: 0.1 })
+            .to(buttonsRef.current.children[0], { x: 0, duration: 0.1 })
+        }
       }
 
       ScrollTrigger.create({

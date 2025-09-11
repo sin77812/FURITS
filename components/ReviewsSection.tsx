@@ -131,7 +131,7 @@ export default function ReviewsSection() {
           {reviews.map((review, index) => (
             <div
               key={review.id}
-              ref={el => reviewsRef.current[index] = el}
+              ref={el => { reviewsRef.current[index] = el }}
               className="relative bg-white/5 backdrop-blur-sm p-8 rounded-lg
                          border border-premium-gold/20 hover:border-premium-gold/40
                          transition-all duration-500"
