@@ -108,7 +108,7 @@ export default function HeroSection() {
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
         <h1 
           ref={titleRef}
-          className="heading-primary text-premium-gold mb-6 perspective-1000"
+          className="heading-primary text-white mb-6 perspective-1000"
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
         >
           제철의 정점

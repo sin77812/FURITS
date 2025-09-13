@@ -22,6 +22,7 @@ const config: Config = {
         'noto-serif': ['Noto Serif KR', 'serif'],
         'pretendard': ['Pretendard', 'sans-serif'],
         'noto-sans': ['Noto Sans KR', 'sans-serif'],
+        'gasoek': ['Gasoek One', 'sans-serif'],
       },
     },
   },
