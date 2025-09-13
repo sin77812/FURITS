@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import Header from '@/components/Header'
+import { CartProvider } from '@/lib/cart-context'
+import { UIProvider } from '@/lib/ui-context'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -19,7 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <CartProvider>
+          <UIProvider>
+            <Header />
+            {children}
+          </UIProvider>
+        </CartProvider>
+      </body>
     </html>
   )
 }
